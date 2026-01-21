@@ -1,1 +1,57 @@
-# Lab_Azure-AZ104-
+# ☁️ Azure VNet Peering Lab (IaC)
+
+![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white)
+![Bicep](https://img.shields.io/badge/Bicep-0078D4?style=for-the-badge&logo=azure-pipelines&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
+
+Este proyecto demuestra la implementación de una arquitectura de red segura en Azure utilizando **Infrastructure as Code (Bicep)**. El objetivo es simular la conectividad privada entre dos oficinas virtuales aisladas mediante **VNet Peering**, validando la comunicación a través de instancias de contenedor efímeras.
+
+Este laboratorio forma parte de mi preparación práctica para la certificación **AZ-104: Microsoft Azure Administrator**.
+
+## 📐 Arquitectura
+
+El despliegue automatizado crea el siguiente entorno:
+
+![Arquitectura de Red](assets/architecture.png)
+
+### Componentes Desplegados:
+1.  **VNet A (Oficina A):** `10.1.0.0/16` con subred delegada para contenedores.
+2.  **VNet B (Oficina B):** `10.2.0.0/16` con subred delegada para contenedores.
+3.  **Global VNet Peering:** Conexión bidireccional de baja latencia entre ambas redes.
+4.  **Azure Container Instances (ACI):** Dos contenedores Linux (Alpine) desplegados dentro de las redes virtuales para realizar pruebas de conectividad (ICMP/Ping).
+
+## 🚀 Despliegue (Quick Start)
+
+### Prerrequisitos
+* Cuenta de Azure activa.
+* [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) instalada.
+
+### Pasos
+1.  **Clonar el repositorio:**
+    ```bash
+    git clone [https://github.com/Epx1lon/az-104-vnet-peering-lab.git](https://github.com/Epx1lon/az-104-vnet-peering-lab.git)
+    cd az-104-vnet-peering-lab
+    ```
+
+2.  **Crear el Grupo de Recursos:**
+    ```bash
+    az group create --name vnet-peering-lab --location eastus2
+    ```
+
+3.  **Desplegar la Infraestructura:**
+    ```bash
+    az deployment group create --resource-group vnet-peering-lab --template-file infra/main.bicep
+    ```
+
+## 🧪 Validación y Pruebas
+
+Una vez finalizado el despliegue, obtendrás las IPs privadas de cada contenedor en los `outputs` de la terminal.
+
+Para validar el **VNet Peering**, accedemos a la consola del contenedor A y hacemos ping al contenedor B:
+
+```bash
+# 1. Acceder al contenedor A
+az container exec --resource-group vnet-peering-lab --name aci-oficina-A --exec-command "/bin/sh"
+
+# 2. Ejecutar ping hacia la IP interna de la Oficina B (ej. 10.2.0.4)
+/ # ping -c 3 10.2.0.4
