@@ -12,15 +12,13 @@ Este laboratorio forma parte de mi preparación práctica para la certificación
 
 El despliegue automatizado crea el siguiente entorno:
 
-![Arquitectura de Red](assets/architecture.png)
+![Azure Architecture Diagram](./images/topología.png)
 
 ### Componentes Desplegados:
 1.  **VNet A (Oficina A):** `10.1.0.0/16` con subred delegada para contenedores.
 2.  **VNet B (Oficina B):** `10.2.0.0/16` con subred delegada para contenedores.
 3.  **Global VNet Peering:** Conexión bidireccional de baja latencia entre ambas redes.
 4.  **Azure Container Instances (ACI):** Dos contenedores Linux (Alpine) desplegados dentro de las redes virtuales para realizar pruebas de conectividad (ICMP/Ping).
-
-![Azure Architecture Diagram](./images/topología.png)
 
 
 ## 🚀 Despliegue (Quick Start)
