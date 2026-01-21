@@ -29,8 +29,8 @@ El despliegue automatizado crea el siguiente entorno:
 ### Pasos
 1.  **Clonar el repositorio:**
     ```bash
-    git clone [https://github.com/Epx1lon/az-104-vnet-peering-lab.git](https://github.com/Epx1lon/az-104-vnet-peering-lab.git)
-    cd az-104-vnet-peering-lab
+    git clone https://github.com/Epx1lon/Lab_AZ104
+    cd Lab_AZ104
     ```
 
 2.  **Crear el Grupo de Recursos:**
