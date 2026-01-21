@@ -20,6 +20,9 @@ El despliegue automatizado crea el siguiente entorno:
 3.  **Global VNet Peering:** Conexión bidireccional de baja latencia entre ambas redes.
 4.  **Azure Container Instances (ACI):** Dos contenedores Linux (Alpine) desplegados dentro de las redes virtuales para realizar pruebas de conectividad (ICMP/Ping).
 
+![Azure Architecture Diagram](./images/topología.png)
+
+
 ## 🚀 Despliegue (Quick Start)
 
 ### Prerrequisitos
