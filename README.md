@@ -44,11 +44,12 @@ El despliegue automatizado crea el siguiente entorno:
 
 Una vez finalizado el despliegue, obtendrás las IPs privadas de cada contenedor en los `outputs` de la terminal.
 
-Para validar el **VNet Peering**, accedemos a la consola del contenedor A y hacemos ping al contenedor B:
+> Para validar el **VNet Peering**, accedemos a la consola del contenedor A y hacemos ping al contenedor B: 
+![Prueba(./images/prueba.png)
 
-```bash
-# 1. Acceder al contenedor A
-az container exec --resource-group vnet-peering-lab --name aci-oficina-A --exec-command "/bin/sh"
+> Recursos creados desde el archivo main.bicep.
+![Prueba(./images/recursos.png)
 
-# 2. Ejecutar ping hacia la IP interna de la Oficina B (ej. 10.2.0.4)
-/ # ping -c 3 10.2.0.4
+
+
+
