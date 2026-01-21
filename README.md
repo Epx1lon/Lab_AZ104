@@ -37,7 +37,7 @@ El despliegue automatizado crea el siguiente entorno:
 
 3.  **Desplegar la Infraestructura:**
     ```bash
-    az deployment group create --resource-group vnet-peering-lab --template-file infra/main.bicep
+    az deployment group create --resource-group vnet-peering-lab --template-file codigo/main.bicep
     ```
 
 ## 🧪 Validación y Pruebas
