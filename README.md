@@ -40,7 +40,7 @@ El despliegue automatizado crea el siguiente entorno:
     az deployment group create --resource-group vnet-peering-lab --template-file codigo/main.bicep
     ```
 
-## 🧪 Validación y Pruebas
+## 🧪 Validación y pruebas
 
 Una vez finalizado el despliegue, obtendrás las IPs privadas de cada contenedor en los `outputs` de la terminal.
 
