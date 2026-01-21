@@ -44,11 +44,13 @@ El despliegue automatizado crea el siguiente entorno:
 
 Una vez finalizado el despliegue, obtendrás las IPs privadas de cada contenedor en los `outputs` de la terminal.
 
-> Para validar el **VNet Peering**, accedemos a la consola del contenedor A y hacemos ping al contenedor B: 
-![Prueba(./images/prueba.png)
+> Para validar el **VNet Peering**, accedemos a la consola del contenedor A y hacemos ping al contenedor B:
+
+![Prueba](./images/prueba.png)
 
 > Recursos creados desde el archivo main.bicep.
-![Prueba(./images/recursos.png)
+
+![Prueba](./images/recursos.png)
 
 
 
