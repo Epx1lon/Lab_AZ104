@@ -12,7 +12,7 @@ Este laboratorio forma parte de mi preparación práctica para la certificación
 
 El despliegue automatizado crea el siguiente entorno:
 
-### Componentes Desplegados:
+### Componentes desplegados:
 1.  **VNet A (Oficina A):** `10.1.0.0/16` con subred delegada para contenedores.
 2.  **VNet B (Oficina B):** `10.2.0.0/16` con subred delegada para contenedores.
 3.  **Global VNet Peering:** Conexión bidireccional de baja latencia entre ambas redes.
