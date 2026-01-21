@@ -30,12 +30,12 @@ El despliegue automatizado crea el siguiente entorno:
     cd Lab_AZ104
     ```
 
-2.  **Crear el Grupo de Recursos:**
+2.  **Crear el grupo de recursos:**
     ```bash
     az group create --name vnet-peering-lab --location eastus2
     ```
 
-3.  **Desplegar la Infraestructura:**
+3.  **Desplegar la infraestructura:**
     ```bash
     az deployment group create --resource-group vnet-peering-lab --template-file codigo/main.bicep
     ```
